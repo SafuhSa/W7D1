@@ -4,7 +4,7 @@ import merge from "lodash/merge";
 const todosReducer = ( state = {}, action ) => {
   Object.freeze(state);
   let nextState = {};
-  
+
   switch(action.type) {
     case RECEIVE_TODOS:
       action.toDos.forEach( toDo => {
@@ -18,5 +18,7 @@ const todosReducer = ( state = {}, action ) => {
       return state;
   }
 };
+
+
 
 export default todosReducer;
